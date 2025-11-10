@@ -184,7 +184,7 @@ const LandingPage: FC = () => {
   return (
     <div className="min-h-screen">
       {/* Header */}
-      <header className="py-6 px-4 sm:px-6 lg:px-8">
+      <header className="py-6 px-4 sm:px-6 lg:px-8 bg-white sticky top-0 z-40 border-b-4 border-black">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           <h1 className="text-5xl font-black text-brain-cyan uppercase tracking-tight" style={{textShadow: '4px 4px 0 #000'}}>Brain</h1>
           <nav className="hidden md:flex items-center space-x-2 bg-brain-yellow p-2 rounded-full border-4 border-black shadow-comic-md">
