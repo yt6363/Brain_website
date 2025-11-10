@@ -11,31 +11,34 @@
   <style>
     body {
       font-family: 'Baloo 2', cursive;
+      background-color: #FFFFFF;
+      /* Subtle grid pattern */
+      background-image:
+        linear-gradient(to right, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+      background-size: 40px 40px;
     }
 
     html {
-      /* New blue bold cartoon crosshair */
-      cursor: url("data:image/svg+xml,%3csvg width='24' height='24' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3e%3cstyle%3e.crosshair{animation:pulse 1.5s ease-in-out infinite;transform-origin:center;}@keyframes pulse{0%25,100%25{transform:scale(1)}50%25{transform:scale(1.1)}}%3c/style%3e%3cg class='crosshair'%3e%3cline x1='12' y1='2' x2='12' y2='22' stroke='%2300D1FF' stroke-width='4' stroke-linecap='round'/%3e%3cline x1='2' y1='12' x2='22' y2='12' stroke='%2300D1FF' stroke-width='4' stroke-linecap='round'/%3e%3c/g%3e%3c/svg%3e") 12 12, auto;
+      /* Bold cartoon crosshair cursor */
+      cursor: url("data:image/svg+xml,%3csvg width='24' height='24' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3e%3cline x1='12' y1='2' x2='12' y2='22' stroke='%23000000' stroke-width='4' stroke-linecap='round'/%3e%3cline x1='2' y1='12' x2='22' y2='12' stroke='%23000000' stroke-width='4' stroke-linecap='round'/%3e%3ccircle cx='12' cy='12' r='3' fill='%2300D1FF' stroke='%23000000' stroke-width='2'/%3e%3c/svg%3e") 12 12, auto;
     }
-    
+
     button, a, input, select {
         cursor: pointer;
     }
 
-    @keyframes wave-pulse {
-      0%, 100% { d: path("M0 10 Q 25 2, 50 10 T 100 10"); }
-      50% { d: path("M0 10 Q 25 18, 50 10 T 100 10"); }
+    /* Comic book style effects */
+    .comic-shadow-lg {
+      box-shadow: 6px 6px 0 rgba(0, 0, 0, 1);
     }
-    .animate-wave-pulse {
-      animation: wave-pulse 4s ease-in-out infinite;
+
+    .comic-shadow-md {
+      box-shadow: 4px 4px 0 rgba(0, 0, 0, 1);
     }
-    
-    @keyframes wave-swell {
-      0%, 100% { d: path("M0 10 Q 25 18, 50 10 T 100 10"); }
-      50% { d: path("M0 10 Q 25 2, 50 10 T 100 10"); }
-    }
-    .animate-wave-swell {
-      animation: wave-swell 5s ease-in-out infinite;
+
+    .comic-shadow-sm {
+      box-shadow: 2px 2px 0 rgba(0, 0, 0, 1);
     }
   </style>
   <script>
@@ -44,9 +47,18 @@
         extend: {
           colors: {
             'brain-cyan': '#00D1FF',
+            'brain-purple': '#7C3AED',
+            'brain-pink': '#FF6B9D',
+            'brain-green': '#6BCF7F',
+            'brain-yellow': '#FFD93D',
           },
           borderRadius: {
             '4xl': '2rem',
+          },
+          boxShadow: {
+            'comic-lg': '6px 6px 0 rgba(0, 0, 0, 1)',
+            'comic-md': '4px 4px 0 rgba(0, 0, 0, 1)',
+            'comic-sm': '2px 2px 0 rgba(0, 0, 0, 1)',
           }
         }
       }
